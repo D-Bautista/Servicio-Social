@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Diego Bautista Avilés">
+
+<title>Bicapa de campo magnético en nanosistema en forma de anillo concontacto interior</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="NanosistemaCorbino_files/libs/clipboard/clipboard.min.js"></script>
+<script src="NanosistemaCorbino_files/libs/quarto-html/quarto.js"></script>
+<script src="NanosistemaCorbino_files/libs/quarto-html/popper.min.js"></script>
+<script src="NanosistemaCorbino_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="NanosistemaCorbino_files/libs/quarto-html/anchor.min.js"></script>
+<link href="NanosistemaCorbino_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="NanosistemaCorbino_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="NanosistemaCorbino_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="NanosistemaCorbino_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="NanosistemaCorbino_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bicapa de campo magnético en nanosistema en forma de anillo concontacto interior</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Diego Bautista Avilés </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<p></p>
+<p>Se construyó un nanosistema en forma de anillo. El sistema está hecho por una bicapa de grafeno en torno al círculo central y por una monocapa para en los bordes exteriores. Hay dos contactos: uno hecho con una monocapa de grafeno y conectada al exterior del anillo, otro hecho con una bicapa y conectado al interior. Sobre el sistema se aplica un campo magnético perpendicular. Para modelar este sistema se empleó la librería Kwant.</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pylab <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> kwant</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Como primer pasó, se determinó la geometría de la bicapa de grafeno. Para ello, se emplearon los siguientes vectores base <span class="math display">\[\vec{a}_{1} = \hat{x}; \quad \vec{a}_{2} = \frac{1}{2}\hat{x} + \frac{\sqrt{3}}{2}\hat{y}; \quad \vec{a}_{3} = \hat{z}.\]</span> Para esto, se asumió que el parámetro del cristal era igual a <span class="math inline">\(1\)</span>. En cada celta unitaria, los orbitales se encontraban en la siguientes posiciones <span class="math display">\[\hat{s}_{1} = \frac{1}{2}\hat{x}+\frac{\sqrt{3}}{6}\hat{y};\quad \vec{s}_{2} = \hat{x}+\frac{\sqrt{3}}{3}\hat{y};\quad \vec{s}_{3}=\frac{1}{2}\hat{z};\quad \vec{s}_{4}=\hat{x}+\frac{\sqrt{3}}{3}\hat{y}+\frac{1}{2}\hat{z}.\]</span> Usando estos vectores, se definió una red en kwant. Para definir la red de grafeno como parte de la monocapa, se usaron los mismos vectores de red y los orbitales <span class="math inline">\(\hat{s}_{1}\)</span> y <span class="math inline">\(\hat{s}_{2}\)</span>.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="op">=</span> np.array([<span class="fl">1.</span>, <span class="fl">0.</span>,<span class="fl">0.</span>])</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a2 <span class="op">=</span> np.array([<span class="fl">0.5</span>, sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">2</span>,  <span class="dv">0</span>])</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>a3 <span class="op">=</span> np.array([<span class="fl">0.</span>,<span class="fl">0.</span>,<span class="fl">1.</span>])</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>bicapa <span class="op">=</span> kwant.lattice.general([(a1),(a2),(a3)],</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                               [(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>, sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">6</span>,  <span class="dv">0</span>), </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                                (  <span class="dv">1</span>, sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">3</span>,  <span class="dv">0</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                (  <span class="dv">0</span>,         <span class="dv">0</span>,<span class="fl">0.5</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                                (  <span class="dv">1</span>, sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">3</span>,<span class="fl">0.5</span>)],norbs <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>a,b,c,d <span class="op">=</span> bicapa.sublattices</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>grafeno <span class="op">=</span> kwant.lattice.general([(a1),(a2),(a3)],</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                               [(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>, sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">6</span>,  <span class="dv">0</span>), </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                                (  <span class="dv">1</span>, sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">3</span>,  <span class="dv">0</span>)],norbs <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>a1,b1 <span class="op">=</span> grafeno.sublattices</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> kwant.lattice.cubic(<span class="dv">1</span>) <span class="co">#Este mallado se definió de forma auxiliar para conectar el contacto interior. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Luego, se definió el valor de los hoppings entre los distintos orbitales. Se usaron los valores <span class="math inline">\(\gamma_{0} = 3.16 \text{ eV}, \gamma_{1} = 0.381 \text{ eV}, \gamma_{3} = 0.38 \text{ eV}, \gamma_{4} = 0.14 \text{ eV} \text{ y } \delta_{1} = 0.022 \text{ eV}.\)</span> Estos valores se obtuvieron del artículo de Edward McCann and Mikito Koshino. La disposición de los hoppings y la red se muestran debajo, tal y como se presenta en el artículo. Para los hoppings en las monocapas, únicamente se consideraron los enlaces entre elementos de una misma capa. Estos están dados por <span class="math inline">\(\gamma_{0}\)</span><img src="red_hoppings.png" class="img-fluid" alt="Disposición hoppings"></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+URL artículo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para el artículo revisar <a href="https://arxiv.org/abs/1205.6953" class="uri">https://arxiv.org/abs/1205.6953</a></p>
+</div>
+</div>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gamma0 <span class="op">=</span> <span class="fl">3.16</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>gamma1 <span class="op">=</span> <span class="fl">0.381</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>gamma3 <span class="op">=</span> <span class="fl">0.38</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>gamma4 <span class="op">=</span> <span class="fl">0.14</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>delta1 <span class="op">=</span> <span class="fl">0.022</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Se colocaron los hoppings entre los respectivos orbitales. De la misma forma, se colocó el valor de los onsites: 0 para los orbitales 1 y 3; y <span class="math inline">\(\Delta_{1} = 0.022 \text{eV}\)</span> para los orbitales 2 y 4. Luego, se construyó un nanosistema en forma de anillo con un radio interior de <span class="math inline">\(r = 10\)</span> y un radio exterior de <span class="math inline">\(R = 40\)</span>.</p>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>r,R,Z <span class="op">=</span> <span class="dv">80</span>,<span class="dv">320</span>,<span class="dv">1</span> <span class="co">#Considerar que la unidad de esto está en múltiplos de sqrt(3)(1.42A).</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ring(site):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  (x,y,z) <span class="op">=</span> site</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  rsq <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> y <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>(r<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;=</span> rsq <span class="op">&lt;</span> R<span class="op">**</span><span class="dv">2</span>) <span class="kw">and</span> (<span class="dv">0</span> <span class="op">&lt;=</span> z <span class="op">&lt;</span> Z)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> onsite(site):</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> site.family <span class="op">==</span> a:</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> site.family <span class="op">==</span> b:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> delta1</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> site.family <span class="op">==</span> c:</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> site.family <span class="op">==</span> d:</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> delta1</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>syst <span class="op">=</span> kwant.Builder()</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>syst[bicapa.shape(ring,(r,<span class="dv">0</span>,<span class="dv">0</span>))] <span class="op">=</span> onsite </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>hoppings1 <span class="op">=</span> (((<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), a, b),</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), a, b),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), a, b),</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), c, d),</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), c, d),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>), c, d))</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>syst[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings1]] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">*</span>gamma0</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>hoppings_2 <span class="op">=</span> ((( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), a, c),</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>              ((<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), a, c),</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>              (( <span class="dv">0</span>,<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>), a, c))</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>syst[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings_2]] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">*</span>gamma3</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>hoppings_3 <span class="op">=</span> (((<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>),b,d),)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>syst[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings_3]] <span class="op">=</span> gamma1</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>hoppings_4 <span class="op">=</span> (((<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), a, d),</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), a, d),</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), a, d))</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>syst[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings_4]] <span class="op">=</span> gamma4              </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>El sistema construido se muestra en la imagen debajo.</p>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>kwant.plot(syst,fig_size<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="NanosistemaCorbino_files/figure-html/cell-6-output-1.png" width="466" height="463"></p>
+</div>
+</div>
+<p>Posteriormente, se retiró la monocapa para una parte del anillo. Esto se hizo usando el comando <code>del</code>de Quarto. Para ello, primero se definió la sección donde se retiraría la capa superior. Esta constaba de la parte del anillo que iba de 3/4 del radio de este al borde del sistema.</p>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> in_hole(site):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    x, y, z <span class="op">=</span> site.pos </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    radsqrt <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.5</span> <span class="op">&lt;=</span> z <span class="op">&lt;</span> Z <span class="kw">and</span> (<span class="fl">0.75</span><span class="op">*</span>R)<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;=</span> radsqrt <span class="op">&lt;</span> R<span class="op">**</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Se retiraron los sitios en la sección definida.</p>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> site <span class="kw">in</span> <span class="bu">filter</span>(in_hole, <span class="bu">list</span>(syst.sites())):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">del</span> syst[site]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>kwant.plot(syst,fig_size<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="NanosistemaCorbino_files/figure-html/cell-8-output-1.png" width="466" height="463"></p>
+</div>
+</div>
+<p>Una vez definidos los enlaces entre el sistema y su forma, se añadió un campo magnético <span class="math inline">\(\vec{\text{B}} = \text{B}\hat{z}\)</span> al sistema. Para considerar el efecto del campo se aplicó la fase de Peierls a cada uno de los enlaces. Con dicho fin, se eligió la siguiente norma para el potencial magnético <span class="math display">\[\vec{\text{A}} = -\text{B}y\hat{x}.\]</span> Se eligió esta norma, pues esta seguía la simetría traslacional que fue posteriormente elegida en los contactos. Con esta elección, la fase de Peierls añadida es <span class="math display">\[
+\phi_{ij} = \frac{\text{q}}{\hbar}\int \vec{\text{A}} \cdot \text{d}\vec{l}.\]</span></p>
+<p>Aquí, se considera que la curva sobre la que se integra es la recta que une dos puntos en el mayado. Es decir, <span class="math display">\[\vec{l} = [(x_{1}-x_{0})\hat{x} + (y_{1}-y_{0})\hat{y} + (z_{1}-z_{0})\hat{z}]t + \vec{v}_{0}.\]</span> Con esto en mente, se definió una función que añadía la fase calculada a cada sitio en el sistema.</p>
+<p><span class="math display">\[\begin{aligned} \phi_{ij} &amp; = - \frac{\text{q}\text{B}}{\hbar}\int y \hat{x} \cdot \text{d}\vec{l} \\
+&amp; = - - \frac{\text{q}\text{B}}{\hbar}\int y \hat{x} \cdot \frac{\text{d}\vec{l}}{\text{d}t}\text{d}t \\
+&amp; = - \frac{\text{q}\text{B}}{\hbar} (x_{1}-x_{0})\int_{0}^{1}\left[(y_{1}-y_{0})t + y_{0} \right]\text{d}t \\
+&amp; =-\frac{\text{q}\text{B}}{2\hbar}(x_{j}-x_{i})(y_{j}+y_{i}).\end{aligned}\]</span> Se agregó esta fase a cada uno de los hoppings del nanosistema. De esta forma, los nuevos hoppings del sistema estaban dados por <span class="math display">\[\gamma_{\text{nuevo}} = \gamma \exp(- \text{i} \frac{\text{q}\text{B}}{2\hbar}(x_{j}-x_{i})(y_{j}+y_{i}))\]</span></p>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>B    <span class="op">=</span> <span class="dv">0</span>              <span class="co"># [T]</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ħ    <span class="op">=</span> <span class="fl">1.0545718e-34</span>   <span class="co"># [SI]</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>h    <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ħ          <span class="co"># [SI]</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>e    <span class="op">=</span> <span class="fl">1.602176634e-19</span> <span class="co"># [SI]</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>ΦB   <span class="op">=</span> h<span class="op">/</span><span class="dv">2</span><span class="op">/</span>e           <span class="co"># [SI]</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>z_B  <span class="op">=</span> <span class="dv">3</span><span class="op">*</span>(<span class="fl">0.142</span>)<span class="op">*</span>(<span class="fl">0.142</span>)<span class="op">*</span>pi<span class="op">*</span>B<span class="op">/</span>ΦB<span class="op">/</span><span class="fl">1e9</span><span class="op">/</span><span class="fl">1e9</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PeierlsPhase(sitei, sitej):</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  xi, yi,zi   <span class="op">=</span>  sitei.pos</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  xj, yj,zi   <span class="op">=</span>  sitej.pos</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  phase_ji <span class="op">=</span> <span class="op">-</span>z_B<span class="op">*</span>(xj<span class="op">-</span>xi)<span class="op">*</span>(yj<span class="op">+</span>yi)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> exp(<span class="ot">1j</span> <span class="op">*</span> phase_ji)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Se aplicó esta fase a todos los sitios del anillo.</p>
+<div class="cell" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (sit,sit1) <span class="kw">in</span> syst.hoppings():</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  syst[sit,sit1] <span class="op">=</span> syst[sit,sit1]<span class="op">*</span>PeierlsPhase(sit1, sit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Se añadieron contactos que se extendían a lo largo del eje x. El primer contacto tenía una reccoría el eje y de <span class="math inline">\(W = 10\)</span> a <span class="math inline">\(-W\)</span>. Este se hizo con una monocapa y se conectó al exterior del anillo. El segundo contacto se hizo con una monocapa de grafeno. Este se hizo con un rango en el eje y de <span class="math inline">\(-r/3\)</span> a <span class="math inline">\(r/3\)</span>. También se consideró el efecto del campo magnético sobre los contactos. La construcción de los contactos se realiza en la celda debajo.</p>
+<div class="cell" data-execution_count="10">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> r</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> contacto(pos):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  x,y,z <span class="op">=</span> pos</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (<span class="op">-</span>W <span class="op">&lt;=</span> y <span class="op">&lt;</span> W) <span class="kw">and</span> (<span class="dv">0</span> <span class="op">&lt;=</span> z <span class="op">&lt;</span> Z)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> contacto2(pos):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  x,y,z <span class="op">=</span> pos</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (<span class="op">-</span>r<span class="op">/</span><span class="dv">3</span> <span class="op">&lt;=</span> y <span class="op">&lt;</span> r<span class="op">/</span><span class="dv">3</span>) <span class="kw">and</span> (<span class="dv">0</span> <span class="op">&lt;=</span> z <span class="op">&lt;</span> Z)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>hoppingsgraf <span class="op">=</span> (((<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), a1, b1),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), a1, b1),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>              ((<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), a1, b1))</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> onsitegraf(site):</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> site.family <span class="op">==</span> a1:</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> delta1</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Contacto izquierdo</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>sym1 <span class="op">=</span> kwant.TranslationalSymmetry(grafeno.vec((<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>,<span class="dv">0</span>)))</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>lead_izq <span class="op">=</span> kwant.Builder(sym1)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>lead_izq[grafeno.shape(contacto, (<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))] <span class="op">=</span> onsitegraf</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>lead_izq[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppingsgraf]] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">*</span>gamma0</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (sit,sit1) <span class="kw">in</span> lead_izq.hoppings():</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  lead_izq[sit,sit1] <span class="op">=</span> lead_izq[sit,sit1]<span class="op">*</span>PeierlsPhase(sit1, sit)</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Contacto derecho</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>sym2 <span class="op">=</span> kwant.TranslationalSymmetry(bicapa.vec((<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>,<span class="dv">0</span>)))</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>lead_cen <span class="op">=</span> kwant.Builder(sym2)</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>lead_cen[bicapa.shape(contacto2, (<span class="dv">0</span>, <span class="dv">0</span>,<span class="dv">0</span>))] <span class="op">=</span> onsite</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>lead_cen[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings1]] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">*</span>gamma0</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>lead_cen[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings_2]] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">*</span>gamma3</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>lead_cen[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings_3]] <span class="op">=</span> gamma1</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>lead_cen[[kwant.builder.HoppingKind(<span class="op">*</span>hopping) <span class="cf">for</span> hopping <span class="kw">in</span> hoppings_4]] <span class="op">=</span> gamma4</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (sit,sit1) <span class="kw">in</span> lead_cen.hoppings():</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>  lead_cen[sit,sit1] <span class="op">=</span> lead_cen[sit,sit1]<span class="op">*</span>PeierlsPhase(sit1, sit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Se terminó de construir el sistema.</p>
+<div class="cell" data-execution_count="11">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>syst.attach_lead(lead_izq)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>syst.attach_lead(lead_cen,lat(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>syst <span class="op">=</span> syst.finalized()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="12">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>kwant.plot(syst,fig_size<span class="op">=</span>(<span class="dv">18</span>,<span class="dv">18</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="NanosistemaCorbino_files/figure-html/cell-13-output-1.png" width="1358" height="1350"></p>
+</div>
+</div>
+<p>Finalmente, se calculó la estructura de bandas de uno de los contactos para confirmar que todo lo planteado es correcto.</p>
+<div class="cell" data-execution_count="13">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> EstructuraBandas(lead,momentos):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  bandas <span class="op">=</span> kwant.physics.Bands(lead)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  eigen  <span class="op">=</span> [bandas(k) <span class="cf">for</span> k <span class="kw">in</span> momentos]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> momentos,eigen</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="14">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>nk <span class="op">=</span> <span class="dv">201</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>momentos <span class="op">=</span> linspace(<span class="dv">0</span>,<span class="dv">2</span><span class="op">*</span>pi,nk)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>momentos,eigen <span class="op">=</span> EstructuraBandas(syst.leads[<span class="dv">0</span>],momentos)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plot(momentos,eigen,<span class="st">'-k'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="NanosistemaCorbino_files/figure-html/cell-15-output-1.png" width="590" height="411"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="15">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>time</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""def Conductancia(syst,energias):</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">  datos = []</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">  for energia in energias:</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">    matrizS = kwant.smatrix(syst,energia)</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">    datos.append(matrizS.transmission(0,1))</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">  return energias,datos</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">energias = linspace(-1.0,1.0,1000)</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">energias,datos = Conductancia(syst,energias)</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">DATOS = column_stack((energias,datos))</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">savetxt('DatosB100ContInterno.txt',DATOS)"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>CPU times: user 1e+03 ns, sys: 0 ns, total: 1e+03 ns
+Wall time: 4.77 µs</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>"def Conductancia(syst,energias):\n  datos = []\n  for energia in energias:\n    matrizS = kwant.smatrix(syst,energia)\n    datos.append(matrizS.transmission(0,1))\n  return energias,datos\n\nenergias = linspace(-1.0,1.0,1000)\nenergias,datos = Conductancia(syst,energias)\n\nDATOS = column_stack((energias,datos))\nsavetxt('DatosB100ContInterno.txt',DATOS)"</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(energias,datos,'o-')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="17">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>Sites <span class="op">=</span> <span class="bu">list</span>(syst.sites)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>posiciones<span class="op">=</span>[]</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> site <span class="kw">in</span> Sites:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if site.pos[2]==2:</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        posiciones.append(site.pos)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>posiciones<span class="op">=</span>np.array(posiciones)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>plt.scatter(posiciones.T[<span class="dv">0</span>], posiciones.T[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x7fe6b27a0898&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="NanosistemaCorbino_files/figure-html/cell-18-output-2.png" width="586" height="411"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="18">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">"""fig = go.Figure(data=[go.Scatter3d(x=posiciones.T[0],</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">                                   y=posiciones.T[1],</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">                                   z=posiciones.T[2],</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">                                   mode='markers',marker=dict(size=2))])</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">camera = dict(</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">    eye=dict(x=0, y=2, z=0.1)</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co">)</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">fig.update_layout( autosize=False,</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co">                  width=600, height=400,</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="co">                  margin=dict(l=0, r=0, b=0, t=0),</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co">                  scene_camera=camera,</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="co">                  font=dict(</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="co">                      size=16,</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="co">                      color="Black"),</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="co">                  scene = dict(xaxis = dict(</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co">                                   title = dict(text="x"),</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co">                                   tickmode = 'array',</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="co">                                   tickvals = [-30,0,30],</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="co">                                   ticktext = ['','0',''],</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="co">                                   showbackground=True),</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="co">                               yaxis = dict(</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="co">                                   title = dict(text="y"),</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="co">                                   tickmode = 'array',</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="co">                                   tickvals = [-30,0,30],</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a><span class="co">                                   ticktext = ['','0',''],</span></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a><span class="co">                                   showbackground=True),</span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a><span class="co">                               zaxis = dict(</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="co">                                   title = dict(text="z"),</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a><span class="co">                                   tickmode = 'array',</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a><span class="co">                                   tickvals = [-10,0,10],</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a><span class="co">                                   ticktext = ['','0',''],</span></span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a><span class="co">                                   range=[-10,10],</span></span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a><span class="co">                                   showbackground=True)))</span></span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a><span class="co">fig.show()"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>'fig = go.Figure(data=[go.Scatter3d(x=posiciones.T[0],\n                                   y=posiciones.T[1],\n                                   z=posiciones.T[2],\n                                   mode=\'markers\',marker=dict(size=2))])\ncamera = dict(\n    eye=dict(x=0, y=2, z=0.1)\n)\nfig.update_layout( autosize=False,\n                  width=600, height=400,\n                  margin=dict(l=0, r=0, b=0, t=0),\n                  scene_camera=camera,\n                  font=dict(\n                      size=16,\n                      color="Black"),\n                  scene = dict(xaxis = dict(\n                                   title = dict(text="x"),\n                                   tickmode = \'array\',\n                                   tickvals = [-30,0,30],\n                                   ticktext = [\'\',\'0\',\'\'],\n                                   showbackground=True),\n                               yaxis = dict(\n                                   title = dict(text="y"),\n                                   tickmode = \'array\',\n                                   tickvals = [-30,0,30],\n                                   ticktext = [\'\',\'0\',\'\'],\n                                   showbackground=True),\n                               zaxis = dict(\n                                   title = dict(text="z"),\n                                   tickmode = \'array\',\n                                   tickvals = [-10,0,10],\n                                   ticktext = [\'\',\'0\',\'\'],\n                                   range=[-10,10],\n                                   showbackground=True)))\nfig.show()'</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="19">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>wave <span class="op">=</span> kwant.wave_function( syst,energy <span class="op">=</span> <span class="fl">0.3</span> )</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ndeg,nsites <span class="op">=</span> shape(wave(<span class="dv">0</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> kwant.operator.Density(syst)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>ρ <span class="op">=</span> zeros(nsites)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(ndeg):</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  psi <span class="op">=</span> wave(<span class="dv">0</span>)[n]</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  ρ   <span class="op">+=</span> rho(psi)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>ρ <span class="op">/=</span> <span class="bu">max</span>(ρ)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>filtro <span class="op">=</span> posiciones.T[<span class="dv">2</span>]<span class="op">&gt;-</span><span class="fl">0.1</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>ax.scatter(posiciones.T[<span class="dv">0</span>],posiciones.T[<span class="dv">1</span>],s<span class="op">=</span><span class="fl">0.001</span>,c<span class="op">=</span><span class="st">'#00AB8E'</span>,alpha<span class="op">=</span><span class="fl">0.05</span>,zorder<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>disco <span class="op">=</span> ax.scatter(posiciones.T[<span class="dv">0</span>][filtro],</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>                   posiciones.T[<span class="dv">1</span>][filtro],</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>                   s <span class="op">=</span> <span class="fl">0.02</span>,</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>                   c <span class="op">=</span> log10(ρ[filtro]),</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>                   vmin<span class="op">=-</span><span class="dv">6</span>,vmax<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>                   alpha <span class="op">=</span> <span class="fl">1.0</span>,</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>                   cmap <span class="op">=</span> <span class="st">'BuGn'</span>,zorder<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>barracolor <span class="op">=</span> fig.colorbar(disco)</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>barracolor.set_ticks([<span class="op">-</span><span class="dv">6</span>,<span class="op">-</span><span class="dv">4</span>,<span class="op">-</span><span class="dv">2</span>,<span class="dv">0</span>])</span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>barracolor.set_label(<span class="st">'log |Ψ|²'</span>,rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">450</span>,<span class="dv">450</span>)</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">450</span>,<span class="dv">450</span>)</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>ax.set_axis_off()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="NanosistemaCorbino_files/figure-html/cell-20-output-1.png" width="480" height="476"></p>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
